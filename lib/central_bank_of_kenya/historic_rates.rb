@@ -2,6 +2,7 @@ require 'nokogiri'
 require 'uri'
 require 'net/http'
 require 'date'
+require 'pry'
 
 module CentralBankOfKenya
   class MissingRates < StandardError; end
@@ -10,10 +11,10 @@ module CentralBankOfKenya
                 'STG POUND'         => 'GBP',
                 'EURO'              => 'EUR',
                 'SA RAND'           => 'ZAR',
-                'KES/USHS'          => 'UGX',
-                'KES/TSHS'          => 'TZS',
-                'KES/RWF'           => 'RWF',
-                'KES/BIF'           => 'BIF',
+                'KES / USHS'        => 'UGX',
+                'KES / TSHS'        => 'TZS',
+                'KES / RWF'         => 'RWF',
+                'KES / BIF'         => 'BIF',
                 'AE DIRHAM'         => 'AED',
                 'CAN $'             => 'CAD',
                 'S FRANC'           => 'CHF',
@@ -40,7 +41,7 @@ module CentralBankOfKenya
 
       if iso_from == 'KES'
         rates[iso_to] ? 1/rates[iso_to] : nil
-      elsif iso_to = 'KES'
+      elsif iso_to == 'KES'
         rates[iso_from]
       else
         nil
@@ -80,22 +81,25 @@ module CentralBankOfKenya
 
       params = {
         'date'    => as_of.strftime('%d'),
-        'month'   => as_of.strftime('%b').upcase,
+        'month'   => as_of.strftime('%m').upcase,
         'year'    => as_of.strftime('%Y'),
         'tdate'   => as_of.strftime('%d'),
-        'tmonth'  => as_of.strftime('%b').upcase,
+        'tmonth'  => as_of.strftime('%m').upcase,
         'tyear'   => as_of.strftime('%Y'),
+        'currency' => '',
         'searchForex' => 'Search'
       }
 
       response = Net::HTTP.post_form(uri, params)
       dom = Nokogiri::HTML(response.body)
-      rows = dom.css('#interbank > table > td > table > tr') # will always return an []
+      rows = dom.css('#cont1 > #cont3 > div.item-page > #interbank > table > tr > td > table > tr')# will always return an []
 
       Hash[rows.map do |row|
-        currency = TRANSLATE[row.css(':nth-child(2) td').text.split.join(' ')]
+        currency = TRANSLATE[row.css(':nth-child(2)').text]
+        next if currency.nil?
         next if currency.empty?
         avrg = row.css(':nth-child(5)').text
+        next if avrg.nil?
         next if avrg.empty?
 
         [currency, Float(avrg)] rescue nil

@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.centralbank.go.ke/index.php/rate-and-statistics/exchange-rates-0
+    body:
+      encoding: US-ASCII
+      string: date=16&month=06&year=2016&tdate=16&tmonth=06&tyear=2016&currency=&searchForex=Search
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.centralbank.go.ke
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 404
+      message: Category not found
+    headers:
+      Date:
+      - Thu, 16 Jun 2016 13:52:43 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.6.20
+      P3p:
+      - CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - 8d465da4074d7c345d17206923b2477b=397d59dda5406fad8b1aa5fab831c9ad; path=/;
+        secure
+      Content-Length:
+      - '3535'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-gb\" lang=\"en-gb\" dir=\"ltr\">\n<head>\n<meta
+        http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />\n<meta
+        name=\"language\" content=\"en-gb\" />\n\n<title>404 - Error: 404</title>\n\n\n\t\t<link
+        rel=\"stylesheet\" href=\"/templates/system/css/system.css\" type=\"text/css\"
+        />\n\t\t<link rel=\"stylesheet\" href=\"/templates/beez5/css/position.css\"
+        type=\"text/css\" media=\"screen,projection\" />\n\t\t<link rel=\"stylesheet\"
+        href=\"/templates/beez5/css/layout.css\" type=\"text/css\" media=\"screen,projection\"
+        />\n\t\t<link rel=\"stylesheet\" href=\"/templates/beez5/css/print.css\" type=\"text/css\"
+        media=\"Print\" />\n\t\t<link rel=\"stylesheet\" href=\"/templates/beez5/css/beez5.css\"
+        type=\"text/css\" />\n\t\t<link rel=\"stylesheet\" href=\"/templates/beez5/css/general.css\"
+        type=\"text/css\" />\n\t\t\t\t<!--[if lte IE 6]>\n\t\t\t<link href=\"/templates/beez5/css/ieonly.css\"
+        rel=\"stylesheet\" type=\"text/css\" />\n\t\t<![endif]-->\n\t\t<!--[if IE
+        7]>\n\t\t\t<link href=\"/templates/beez5/css/ie7only.css\" rel=\"stylesheet\"
+        type=\"text/css\" />\n\t\t<![endif]-->\n\n\n<style type=\"text/css\">\n\t\t\t<!--\n\t\t\t#errorboxbody\n\t\t\t{margin:30px}\n\t\t\t#errorboxbody
+        h2\n\t\t\t{font-weight:normal;\n\t\t\tfont-size:1.5em}\n\t\t\t#searchbox\n\t\t\t{background:#eee;\n\t\t\tpadding:10px;\n\t\t\tmargin-top:20px;\n\t\t\tborder:solid
+        1px #ddd\n\t\t\t}\n\t\t\t-->\n</style>\n\n</head>\n\n<body>\n\n<table width=\"850\"
+        height=\"22\" border=\"0\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\">\n
+        \ <tr>\n    <td><div id=\"all\">\n\t\t<div id=\"back\">\n\t\t\t\t\t<div id=\"header\">\n\t\t\t\t\t\t\t\t<div
+        class=\"logoheader\">\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t<h1 id=\"logo\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img
+        src=\"/images/sampledata/fruitshop/fruits.gif\" alt=\"Joomla!\" />\n\t\t\t\t\t\t\t\t\t\t\t\t</h1>\n\t\t\t\t\t</div><!--
+        end logoheader -->\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t            </div>\n\t\t<!--
+        end header -->\n\t\t\t\t\t<div id=\"contentarea2\" >\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        class=\"left1\" id=\"nav\">\n\t\t\t\t\t\t\t\t\t\t<h2 class=\"unseen\">Navigation</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!--
+        end navi -->\n\t\t\t<div id=\"wrapper2\">\n\t\t\t<div id=\"errorboxbody\">\n\t\t\t\t\t\t<h2>An
+        error has occurred.<br />\n\t\t\t\t\t\t\t\tThe requested page cannot be found.</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        id=\"searchbox\">\n\t\t\t\t\t\t\t\t\t<h3 class=\"unseen\">Search</h3>\n\t\t\t\t\t\t\t\t\t<p>You
+        may wish to search the site or visit the home page.</p>\n\t\t\t\t\t\t\t\t\t<form
+        action=\"/index.php/rate-and-statistics\" method=\"post\">\n\t<div class=\"search\">\n\t\t<label
+        for=\"mod-search-searchword\">Search...</label><input name=\"searchword\"
+        id=\"mod-search-searchword\" maxlength=\"20\"  class=\"inputbox\" type=\"text\"
+        size=\"40\" value=\"Search...\"  onblur=\"if (this.value=='') this.value='Search...';\"
+        onfocus=\"if (this.value=='Search...') this.value='';\" /><input type=\"submit\"
+        value=\"Go!\" class=\"button\" onclick=\"this.form.searchword.focus();\"/>\t<input
+        type=\"hidden\" name=\"task\" value=\"search\" />\n\t<input type=\"hidden\"
+        name=\"option\" value=\"com_search\" />\n\t<input type=\"hidden\" name=\"Itemid\"
+        value=\"149\" />\n\t</div>\n</form>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t<p><a
+        href=\"/index.php\" title=\"Go to the Home Page\">Home Page</a></p>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t<h3>If
+        difficulties persist, please contact the System Administrator of this site
+        and report the error below.</h3>\n\n\t\t\t\t\t<h2>#404&nbsp;Category not found</h2><br
+        />\n\n\t\t\t\t</div><!-- end wrapper -->\n\t\t\t</div><!-- end contentarea
+        -->\n\n\t\t\t\t\t\t\n\n\t\t\t</div>  <!--end all -->\n\t\t\t</div>\n\t\t\t</div>\n\n\t\t<div
+        id=\"footer-sub\">\n\n\t\t\t\t\t\t\t<div id=\"footer\">\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t</div><!--
+        end footer -->\n\t\t\t\n\t\t\t</div></td>\n  </tr>\n</table>\n\n\t\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Thu, 16 Jun 2016 13:57:20 GMT
+recorded_with: VCR 3.0.3

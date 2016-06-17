@@ -3,7 +3,7 @@ rvm:
  - 2.2
 before_install:
   - gem update bundler --no-document
-script: bundle exec rspec spec
+script: bundle exec rspec spec && INTEGRATION_TEST=1 bundle exec rspec --tag vcr
 notifications:
   email:
   - alexander.donkin@plugintheworld.com

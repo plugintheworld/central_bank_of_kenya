@@ -10,3 +10,11 @@ VCR.configure do |c|
   #integrates VCR with RSpec
   c.configure_rspec_metadata!
 end
+
+# Update settings if this is an integration test
+if ENV['INTEGRATION_TEST']
+  #Turn off VCR and prevent errors for missing cassettes
+  VCR.turn_off!(:ignore_cassettes => true)
+  #Enable webmock connections
+  WebMock.allow_net_connect!
+end

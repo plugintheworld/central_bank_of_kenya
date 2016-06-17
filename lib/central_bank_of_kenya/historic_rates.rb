@@ -2,7 +2,6 @@ require 'nokogiri'
 require 'uri'
 require 'net/http'
 require 'date'
-require 'pry'
 
 module CentralBankOfKenya
   class MissingRates < StandardError; end

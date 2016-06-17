@@ -25,7 +25,6 @@ module CentralBankOfKenya
                 'CHINESE YUAN'      => 'CNY',
                 'AUSTRALIAN $'      => 'AUD'}
 
-
   class RateScraper
     attr_reader :start_date
     attr_accessor :form_url

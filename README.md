@@ -1,5 +1,5 @@
 # Central Bank of Kenya Historic Exchange Rates
-[![Build Status](https://travis-ci.org/plugintheworld/central_bank_of_kenya.svg?branch=master](https://travis-ci.org/plugintheworld/central_bank_of_kenya)
+[![Build Status](https://travis-ci.org/plugintheworld/central_bank_of_kenya.svg?branch=master)](https://travis-ci.org/plugintheworld/central_bank_of_kenya)
 
 Wraps a simple scraper to retrieve the historic exchange rates for Kenyanian Shilling (KES). Returns the average rates for yesterday or any day specified and supported by the Central Bank of Kenya.
 
